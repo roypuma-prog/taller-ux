@@ -53,3 +53,19 @@ A continuación se detallan los problemas de usabilidad identificados en la inte
 | **`:focus-visible` amarillo** | Accesibilidad (WCAG) | Muestra un contorno claro cuando se navega con la tecla `Tab`, permitiendo saber qué elemento tiene el foco. |
 | **`--color-primario: #0b5cad`** | Contraste de Color | Cumple con la relación de contraste mínima de 4.5:1 para ser leído sin cansancio visual. |
 | **`flex: 1` en `.boton-principal`** | Jerarquía Visual | Hace que el botón de envío sea visualmente más grande que el secundario de limpieza. |
+# Taller UX
+
+Formulario de inscripción rediseñado aplicando principios de UX/UI.
+
+Página publicada: https://roypuma-prog.github.io/taller-ux/
+
+## Cambios aplicados
+
+| Principio | Cambio |
+| :--- | :--- |
+| **Visibilidad del estado** | Mensajes dinámicos de envío, error y éxito. |
+| **Prevención de errores** | Campos obligatorios y validación de formato de correo. |
+| **Control y libertad** | Ventana de confirmación previa antes de limpiar el formulario. |
+| **Ley de Fitts** | Botón principal grande (`flex: 1`) y separado del botón secundario. |
+| **Ley de Hick** | Talleres agrupados por categorías claras con `<optgroup>`. |
+| **Accesibilidad** | Etiquetas `<label>`, texto alternativo (`alt`), contraste alto y foco visible con `:focus-visible`. |
