@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de Notas Accesible</title>
+  <!-- Vinculación del CSS de la tarea -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Mis Notas</h1>
+    
+    <div id="notificacion" class="notificacion" role="status" aria-live="polite"></div>
+
+    <section class="bloque">
+      <h2>1. Crear nueva nota</h2>
+      <form id="form-notas" novalidate>
+        <label for="titulo-nota">Título de la nota</label>
+        <input id="titulo-nota" type="text" placeholder="Ej. Tareas del laboratorio" required>
+
+        <label for="contenido-nota">Contenido</label>
+        <textarea id="contenido-nota" rows="3" placeholder="Escribe el detalle aquí..." required></textarea>
+
+        <div class="acciones">
+          <button type="submit" id="btn-guardar" class="boton-principal">Guardar nota</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="bloque">
+      <h2>2. Lista de notas</h2>
+      <ul id="lista-notas" class="lista-notas"></ul>
+    </section>
+  </main>
+
+  <!-- Vinculación de JavaScript de la tarea -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -69,3 +69,35 @@ Página publicada: https://roypuma-prog.github.io/taller-ux/
 | **Ley de Fitts** | Botón principal grande (`flex: 1`) y separado del botón secundario. |
 | **Ley de Hick** | Talleres agrupados por categorías claras con `<optgroup>`. |
 | **Accesibilidad** | Etiquetas `<label>`, texto alternativo (`alt`), contraste alto y foco visible con `:focus-visible`. |
+# Auditoría de Usabilidad y Rediseño UX/UI — App de Notas
+
+Documento de auditoría heurística y rediseño para la aplicación `app-notas`.
+
+---
+
+## 📋 1. Auditoría Heurística de Nielsen
+
+| Heurística | Problema en Pantalla Original | Solución Aplicada |
+| :--- | :--- | :--- |
+| **Visibilidad del estado del sistema** | Al agregar o eliminar una nota no aparecía ningún mensaje de confirmación. | Se añadió un mensaje dinámico de confirmación (*"Nota agregada con éxito"* o *"Nota eliminada"*). |
+| **Coincidencia con el mundo real** | Los botones tenían textos vagos e íconos sin etiquetas. | Se cambiaron por etiquetas descriptivas: *"Guardar nota"*, *"Cancelar"* y *"Eliminar"*. |
+| **Control y libertad del usuario** | Se borraban las notas de forma inmediata sin opción a cancelar. | Se agregó un cuadro de confirmación previo y opción para cancelar la acción destructiva. |
+| **Prevención de errores** | Se permitía guardar notas vacías o con espacios en blanco. | Se validan los campos evitando guardar entradas vacías y notificando al usuario. |
+| **Reconocer, no recordar** | No había `<label>` explicativas y la interfaz no mostraba el foco visual al usar la tecla `Tab`. | Se agregaron etiquetas `<label>` permanentes y el estilo `:focus-visible` resaltado. |
+
+---
+
+## 📐 2. Justificación de Leyes de Usabilidad
+
+* **Ley de Fitts:** El botón principal posee una altura mínima de `44px` y ancho completo para facilitar la interacción rápida.
+* **Ley de Hick:** Se redujeron las acciones principales a lo esencial (*Guardar*, *Cancelar*, *Eliminar*) para acelerar la toma de decisiones.
+* **Ley de Miller:** La información está segmentada en 2 secciones lógicas: **1. Crear nueva nota** y **2. Lista de notas**.
+
+---
+
+## ♿ 3. Accesibilidad (WCAG 2.2)
+
+* **Etiquetas y Alternativos:** `<label>` vinculados en cada entrada y atributo `alt` en imágenes.
+* **Contraste de Color:** Combinación de color `#0b5cad` sobre `#ffffff` garantizando un ratio mayor a **4.5:1**.
+* **Navegación por Teclado:** Borde `:focus-visible` amarillo visible en todos los controles navegables por `Tab`.
+* **Puntaje Lighthouse:** **100 / 100** en Accesibilidad.
