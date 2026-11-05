@@ -24,3 +24,24 @@ A continuación se detallan los problemas de usabilidad identificados en la inte
 * **Alta:** Impide completar la tarea correctamente o causa la pérdida irreversible de información.
 * **Media:** Vuelve la experiencia confusa, lenta o requiere un esfuerzo cognitivo innecesario.
 * **Baja:** Detalle estético o de diseño menor que no bloquea la interacción.   
+### 📋 Ejercicio 2: Auditoría Heurística de la Interfaz Original
+
+| Heurística / Criterio | Problema Encontrado | Gravedad |
+| :--- | :--- | :--- |
+| **Visibilidad del estado** | Al pulsar el botón «ok», no aparece ningún mensaje ni indicador de confirmación: el usuario desconoce si el registro fue procesado o falló. | **Alta** |
+| **Coincidencia con el mundo real** | El botón tiene el texto ambiguo «ok» en lugar de un término claro. Además, no se usan etiquetas `<label>` y los `placeholder` desaparecen al escribir. | **Media** |
+| **Control y libertad** | El enlace de «BORRAR TODO» elimina todos los datos al instante sin pedir confirmación previa ni ofrecer la posibilidad de deshacer. | **Alta** |
+| **Prevención de errores** | Permite hacer clic en «ok» dejando campos obligatorios vacíos o ingresando un formato de correo inválido (ej. `correo-sin-arroba`). | **Alta** |
+| **Reconocer, no recordar** | Al no tener `<label>`, la pista desaparece cuando comienzas a escribir, obligando a recordar qué información solicitaba la caja de texto. | **Media** |
+| **Accesibilidad** | Los campos no tienen un indicador visual de foco (`outline: none`), lo que hace imposible saber dónde estás ubicado al navegar con la tecla `Tab`. | **Alta** |
+| **Principios visuales** | El texto tiene poco contraste (gris claro `#b5b5b5` sobre fondo blanco), la fuente es diminuta (11px/12px) y el enlace «BORRAR TODO» es rojo y gigante, generando una jerarquía visual invertida. | **Media** |
+### 📋 Ejercicio 3: Justificación de Cambios en la Estructura HTML
+
+| Cambio | Principio | Por qué ayuda |
+| :--- | :--- | :--- |
+| **`<label>` en lugar de `placeholder`** | Reconocer, no recordar | La etiqueta no desaparece al escribir; la persona no tiene que recordar qué iba en cada campo. |
+| **«Inscribirme» en lugar de «ok» y un título que habla de tú** | Coincidencia con el mundo real | Se usa el lenguaje de quien se inscribe, no el del sistema («procesar la solicitud»). |
+| **`<optgroup>` con 3 categorías** | Ley de Hick | Más opciones a la vez significan más tiempo para decidir. Agrupadas, primero eliges la categoría y después el taller. |
+| **Dos `<fieldset>` numerados** | Ley de Miller | Recordamos unos 7 elementos a la vez. Dividir el formulario en bloques cortos reduce la carga de memoria. |
+| **`type="email"`, `required` y ejemplo de formato** | Prevención de errores | El navegador ya sabe qué es un correo válido y la persona ve el formato esperado antes de escribir. |
+| **`alt` en la imagen** | Accesibilidad | Un lector de pantalla lee el texto alternativo a quien no puede ver la imagen. |
