@@ -45,3 +45,11 @@ A continuación se detallan los problemas de usabilidad identificados en la inte
 | **Dos `<fieldset>` numerados** | Ley de Miller | Recordamos unos 7 elementos a la vez. Dividir el formulario en bloques cortos reduce la carga de memoria. |
 | **`type="email"`, `required` y ejemplo de formato** | Prevención de errores | El navegador ya sabe qué es un correo válido y la persona ve el formato esperado antes de escribir. |
 | **`alt` en la imagen** | Accesibilidad | Un lector de pantalla lee el texto alternativo a quien no puede ver la imagen. |
+### 📋 Ejercicio 5: Justificación del CSS y Accesibilidad Visual
+
+| Propiedad / Estilo | Principio Aplicado | Explicación / Impacto UX |
+| :--- | :--- | :--- |
+| **`min-height: 44px`** | Ley de Fitts | Garantiza una superficie táctil amplia para pulsar fácilmente con el dedo o mouse sin fallar. |
+| **`:focus-visible` amarillo** | Accesibilidad (WCAG) | Muestra un contorno claro cuando se navega con la tecla `Tab`, permitiendo saber qué elemento tiene el foco. |
+| **`--color-primario: #0b5cad`** | Contraste de Color | Cumple con la relación de contraste mínima de 4.5:1 para ser leído sin cansancio visual. |
+| **`flex: 1` en `.boton-principal`** | Jerarquía Visual | Hace que el botón de envío sea visualmente más grande que el secundario de limpieza. |
